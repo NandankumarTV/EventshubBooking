@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Event | Admin Dashboard</title>
+    <link rel="stylesheet" href="css/editEvent.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>✏️ Edit Event</h1>
+        <p>Update the details of your event below</p>
+    </header>
+
+    <form id="editEventForm" class="event-form">
+        <!-- Hidden field for eventName -->
+        <input type="hidden" id="eventName">
+
+        <div class="form-group">
+            <label for="imageUrl">Image URL</label>
+            <input type="text" id="imageUrl" placeholder="https://example.com/image.jpg" required>
+        </div>
+
+        <div class="form-group">
+            <label for="location">Location</label>
+            <select id="location" required>
+                <option value="">-- Select Location --</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Pune">Pune</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="eventType">Event Type</label>
+            <select id="eventType" required>
+                <option value="">-- Select Type --</option>
+                <option value="Educational">🎓 Educational & Professional</option>
+                <option value="Cultural">🎭 Entertainment & Cultural</option>
+                <option value="Sports">⚽ Sports & Fitness</option>
+                <option value="Corporate">💼 Corporate & Networking</option>
+                <option value="Social">🌿 Social & Community</option>
+                <option value="Health">🧘‍♀️ Health & Wellness</option>
+                <option value="Charity">🏥 Charity functions</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="eventDateTime">Event Date & Time</label>
+            <input type="datetime-local" id="eventDateTime" required>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group half">
+                <label for="totalSeats">Total Seats</label>
+                <input type="number" id="totalSeats" placeholder="e.g., 100" required>
+            </div>
+            <div class="form-group half">
+                <label for="availableSeats">Available Seats</label>
+                <input type="number" id="availableSeats" placeholder="e.g., 100" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="price">Ticket Price (₹)</label>
+            <input type="number" step="0.01" id="price" placeholder="Enter price" required>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Event Description</label>
+            <textarea id="description" placeholder="Write a short description of the event..." required></textarea>
+        </div>
+
+        <button type="submit" id="updateEventBtn">Update Event</button>
+        <p id="responseMsg"></p>
+    </form>
+</div>
+
+<script src="js/editEvent.js"></script>
+</body>
+</html>

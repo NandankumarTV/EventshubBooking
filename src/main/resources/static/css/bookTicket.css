@@ -1,0 +1,122 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1e1e1e, #333);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.booking-container {
+  background: #222;
+  padding: 2rem 3rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  width: 380px;
+}
+
+.booking-container h2 {
+  color: #4caf50;
+  margin-bottom: 0.3rem;
+}
+
+.event-price {
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.booking-container h3 {
+  margin-bottom: 2rem;
+  font-weight: 500;
+  color: #ddd;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #bbb;
+}
+
+input {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #555;
+  background: #111;
+  color: white;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+#availabilityMsg {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+}
+
+#bookBtn {
+  width: 100%;
+  padding: 0.8rem;
+  background: #4caf50;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#bookBtn:hover {
+  background: #45a049;
+}
+
+#bookBtn:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+/* Notification styles */
+#notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #333;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+#notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#notification.success {
+  background: #28a745;
+}
+
+#notification.error {
+  background: #dc3545;
+}

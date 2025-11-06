@@ -1,0 +1,108 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f8fafc;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.booking-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eef2f7;
+  padding: 15px 20px;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.booking-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.booking-details {
+  flex: 1;
+}
+
+.booking-details h3 {
+  margin: 0 0 5px 0;
+  color: #111;
+}
+
+.booking-details p {
+  margin: 3px 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.cancel-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.cancel-btn:hover {
+  background: #b02a37;
+}
+
+.cancel-btn:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+/* Notification toast */
+#notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #333;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+#notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#notification.success {
+  background: #28a745;
+}
+
+#notification.error {
+  background: #dc3545;
+}

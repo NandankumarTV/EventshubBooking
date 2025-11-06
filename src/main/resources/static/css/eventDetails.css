@@ -1,0 +1,192 @@
+/* --- Event Card --- */
+.event-card-detailed {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  background: #222;
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.event-image-large {
+  width: 350px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* --- Action Buttons --- */
+.actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.like-btn, .comment-btn, .book-btn {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.like-btn:hover, .comment-btn:hover, .book-btn:hover {
+  background: #555;
+}
+
+/* --- Comment Box --- */
+.comment-box {
+  margin-top: 2rem;
+  background: #2a2a2a;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #555;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.comment-box.hidden {
+  display: none;
+}
+
+/* --- Header --- */
+.comment-box h3 {
+  margin: 0 0 1rem 0;
+  color: #fff;
+}
+
+/* --- Comments List --- */
+.comments-list {
+  max-height: 250px;
+  overflow-y: auto;
+  background: #1c1c1c;
+  border: 1px solid #555;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.comment-item {
+  border-bottom: 1px solid #444;
+  padding: 8px 0;
+  line-height: 1.5;
+}
+
+.comment-item strong {
+  color: #4caf50;
+}
+
+/* --- Add Comment Section --- */
+.add-comment {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.add-comment textarea {
+  width: 100%;
+  min-height: 80px;
+  background: #111;
+  color: white;
+  border: 1px solid #444;
+  padding: 0.8rem;
+  border-radius: 10px;
+  resize: vertical;
+  font-size: 1rem;
+}
+
+.add-comment textarea::placeholder {
+  color: #aaa;
+}
+
+.add-comment button {
+  align-self: flex-end;
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.add-comment button:hover {
+  background: #45a049;
+}
+
+/* --- Close Button --- */
+#closeCommentBox {
+  background: #d32f2f;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+#closeCommentBox:hover {
+  background: #b71c1c;
+}
+
+/* --- Scrollbar --- */
+.comments-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.comments-list::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 10px;
+}
+
+.comments-list::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+
+.action-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.action-btn:hover {
+  transform: scale(1.15);
+}
+
+.pulse {
+  animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #333;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  opacity: 0.9;
+  z-index: 9999;
+}
+
+.toast.error {
+  background: #d9534f;
+}

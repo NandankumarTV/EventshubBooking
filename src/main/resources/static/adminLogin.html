@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login | EventsHub</title>
+    <link rel="stylesheet" href="css/adminLogin.css">
+</head>
+<body>
+<div class="login-container">
+    <h1>👑 Admin Login</h1>
+    <p>Access the admin dashboard</p>
+
+    <form id="adminLoginForm">
+        <div class="form-group">
+            <label for="adminName">Admin Name</label>
+            <input type="text" id="adminName" placeholder="Enter admin name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password" required>
+        </div>
+
+        <button type="submit" id="loginBtn">Login</button>
+        <p id="loginMsg"></p>
+    </form>
+</div>
+
+<script src="js/adminLogin.js"></script>
+</body>
+</html>

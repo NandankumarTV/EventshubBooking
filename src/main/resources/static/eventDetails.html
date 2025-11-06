@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Details</title>
+    <link rel="stylesheet" href="css/eventDetails.css">
+</head>
+<body>
+<div class="event-container">
+    <img id="eventImage" alt="Event Image" class="event-image">
+    <h1 id="eventName"></h1>
+    <p id="eventLocation"></p>
+    <p id="eventDescription"></p>
+    <p><strong>Date & Time:</strong> <span id="eventDateTime"></span></p>
+    <p><strong>Type:</strong> <span id="eventType"></span></p>
+    <p><strong>Price:</strong> ₹<span id="eventPrice"></span></p>
+
+    <div class="event-actions">
+        <button id="likeBtn" class="action-btn">❤️ <span id="likeCount">0</span></button>
+        <button id="commentBtn" class="action-btn">💬 <span id="commentCount">0</span></button>
+    </div>
+
+    <button id="bookTicketBtn" class="book-btn">Book Ticket</button>
+
+    <div id="commentSection" class="comment-box hidden">
+        <h3>Comments</h3>
+        <div id="commentList"></div>
+        <textarea id="newComment" placeholder="Add a comment..."></textarea>
+        <div class="comment-actions">
+            <button id="addCommentBtn">Add Comment</button>
+            <button id="closeCommentBox">Close</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/eventDetails.js"></script>
+</body>
+</html>
