@@ -112,7 +112,6 @@ Make sure you have installed:
 
 ## 🚀 Future Enhancements
 
-- Add admin dashboard  
 - Implement email notifications  
 - Improve frontend design  
 - Integrate payment gateway for event booking  
